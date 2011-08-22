@@ -10,7 +10,13 @@
 -include("../include/kanaloa.hrl").
 
 -export([open/1, send/1, send_json/1, close/0]).
+-export([get/1]).
 -export([log/2]).
+
+%% @spec get(response) -> term()
+%% @doc Return the internal representation of the given field.
+get(response) ->
+    MochiResp.
 
 %% @spec open(Owner::pid()) -> any()
 %% @doc Opens the connection. Control does not return from this call.
