@@ -125,7 +125,7 @@ loop(Owner, Count) ->
 loop_accumulate(Owner, Messages, Timeout, SizeCutoff) when is_list(Messages) andalso is_integer(Timeout) andalso is_integer(SizeCutoff) ->
     Now = now_ms(),
     Size = iolist_size(Messages),
-    io:format("The size of the batch is ~w\n", [Size]),
+    % io:format("The size of the batch is ~w\n", [Size]),
     if
 	Timeout < Now ->  % Batch timeout
 	    {ok, Messages};
