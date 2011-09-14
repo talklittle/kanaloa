@@ -1,0 +1,22 @@
+{application, kanaloa,
+ [
+  {description, "Kanaloa"},
+  {vsn, "0.01"},
+  {modules, [
+             kanaloa,
+             kanaloa_connection,
+             kanaloa_rpc,
+             kanaloa_state_server,
+             kanaloa_sup,
+             kanaloa_utils,
+             kanaloa_web,
+             mochiweb_http
+            ]},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  crypto
+                 ]},
+  {env, []}
+ ]}.
