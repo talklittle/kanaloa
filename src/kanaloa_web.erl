@@ -20,8 +20,8 @@ start_link(MochiwebOptions, Settings) ->
                    ?MODULE:loop(Req, Settings)
            end,
     
-    Result = mochiweb_http:start([{loop, Loop} | MochiwebOptions]),
-    io:format("mochiweb_http:start result: ~w\n", [Result]),
+    Result = mochiweb_http:start_link([{loop, Loop} | MochiwebOptions]),
+    io:format("mochiweb_http:start_link result: ~w\n", [Result]),
     Result.
 
 %% @doc Stops mochiweb_http.
